@@ -14,6 +14,8 @@ with open("catalog.txt") as f:
     # Misc fix-ups
     content = re.sub(r'\.{20,}', '', content)
 
+    content = re.sub(r'^.*\(cont.\).*$', '', content, flags=re.M)
+
     # Add paragraph double spacing (identified using leading whitespace)
     content = re.sub(r"^\s+(\w)", r"\n\1", content, flags=re.M)
 
