@@ -6,7 +6,7 @@ catalog.pdf:
 catalog.txt: catalog.pdf
 	pdftotext -layout -nopgbrk catalog.pdf
 
-catalog.md: catalog.txt
+catalog.md: catalog.txt reformat.py
 	python3 reformat.py > $@
 
 clean:
