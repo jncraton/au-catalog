@@ -8,6 +8,7 @@ catalog.txt: catalog.pdf
 
 catalog.md: catalog.txt reformat.py
 	python3 reformat.py > $@
+	npx prettier --write --prose-wrap never $@
 
 clean:
 	rm -f catalog.pdf catalog.txt
