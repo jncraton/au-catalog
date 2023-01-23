@@ -11,4 +11,4 @@ catalog.md: catalog.txt reformat.py
 	npx prettier --write --prose-wrap never $@
 
 clean:
-	rm -f catalog.pdf catalog.txt
+	rm -f catalog.pdf catalog.txt catalog.md
